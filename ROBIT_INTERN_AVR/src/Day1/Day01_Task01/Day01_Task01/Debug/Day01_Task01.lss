@@ -1,0 +1,410 @@
+
+Day01_Task01.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000296  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000222  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000002  00800100  00800100  00000296  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000296  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002c8  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000030  00000000  00000000  00000304  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000999  00000000  00000000  00000334  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000843  00000000  00000000  00000ccd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000003a9  00000000  00000000  00001510  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000008c  00000000  00000000  000018bc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000436  00000000  00000000  00001948  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000200  00000000  00000000  00001d7e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000020  00000000  00000000  00001f7e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	53 c0       	rjmp	.+166    	; 0xac <__bad_interrupt>
+   6:	00 00       	nop
+   8:	51 c0       	rjmp	.+162    	; 0xac <__bad_interrupt>
+   a:	00 00       	nop
+   c:	97 c0       	rjmp	.+302    	; 0x13c <__vector_3>
+   e:	00 00       	nop
+  10:	cd c0       	rjmp	.+410    	; 0x1ac <__vector_4>
+  12:	00 00       	nop
+  14:	4b c0       	rjmp	.+150    	; 0xac <__bad_interrupt>
+  16:	00 00       	nop
+  18:	49 c0       	rjmp	.+146    	; 0xac <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	47 c0       	rjmp	.+142    	; 0xac <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	45 c0       	rjmp	.+138    	; 0xac <__bad_interrupt>
+  22:	00 00       	nop
+  24:	43 c0       	rjmp	.+134    	; 0xac <__bad_interrupt>
+  26:	00 00       	nop
+  28:	41 c0       	rjmp	.+130    	; 0xac <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	3f c0       	rjmp	.+126    	; 0xac <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	3d c0       	rjmp	.+122    	; 0xac <__bad_interrupt>
+  32:	00 00       	nop
+  34:	3b c0       	rjmp	.+118    	; 0xac <__bad_interrupt>
+  36:	00 00       	nop
+  38:	39 c0       	rjmp	.+114    	; 0xac <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	37 c0       	rjmp	.+110    	; 0xac <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	35 c0       	rjmp	.+106    	; 0xac <__bad_interrupt>
+  42:	00 00       	nop
+  44:	33 c0       	rjmp	.+102    	; 0xac <__bad_interrupt>
+  46:	00 00       	nop
+  48:	31 c0       	rjmp	.+98     	; 0xac <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	2f c0       	rjmp	.+94     	; 0xac <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	2d c0       	rjmp	.+90     	; 0xac <__bad_interrupt>
+  52:	00 00       	nop
+  54:	2b c0       	rjmp	.+86     	; 0xac <__bad_interrupt>
+  56:	00 00       	nop
+  58:	29 c0       	rjmp	.+82     	; 0xac <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	27 c0       	rjmp	.+78     	; 0xac <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	25 c0       	rjmp	.+74     	; 0xac <__bad_interrupt>
+  62:	00 00       	nop
+  64:	23 c0       	rjmp	.+70     	; 0xac <__bad_interrupt>
+  66:	00 00       	nop
+  68:	21 c0       	rjmp	.+66     	; 0xac <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	1f c0       	rjmp	.+62     	; 0xac <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	1d c0       	rjmp	.+58     	; 0xac <__bad_interrupt>
+  72:	00 00       	nop
+  74:	1b c0       	rjmp	.+54     	; 0xac <__bad_interrupt>
+  76:	00 00       	nop
+  78:	19 c0       	rjmp	.+50     	; 0xac <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	17 c0       	rjmp	.+46     	; 0xac <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	15 c0       	rjmp	.+42     	; 0xac <__bad_interrupt>
+  82:	00 00       	nop
+  84:	13 c0       	rjmp	.+38     	; 0xac <__bad_interrupt>
+  86:	00 00       	nop
+  88:	11 c0       	rjmp	.+34     	; 0xac <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_clear_bss>:
+  98:	21 e0       	ldi	r18, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	01 c0       	rjmp	.+2      	; 0xa2 <.do_clear_bss_start>
+
+000000a0 <.do_clear_bss_loop>:
+  a0:	1d 92       	st	X+, r1
+
+000000a2 <.do_clear_bss_start>:
+  a2:	a2 30       	cpi	r26, 0x02	; 2
+  a4:	b2 07       	cpc	r27, r18
+  a6:	e1 f7       	brne	.-8      	; 0xa0 <.do_clear_bss_loop>
+  a8:	02 d0       	rcall	.+4      	; 0xae <main>
+  aa:	b9 c0       	rjmp	.+370    	; 0x21e <_exit>
+
+000000ac <__bad_interrupt>:
+  ac:	a9 cf       	rjmp	.-174    	; 0x0 <__vectors>
+
+000000ae <main>:
+
+volatile int check = 0; // LED 이동 동작 확인
+
+int main(void)
+{
+	DDRA = 0xFF; // LED 출력
+  ae:	9f ef       	ldi	r25, 0xFF	; 255
+  b0:	9a bb       	out	0x1a, r25	; 26
+	DDRE &= ~0x30; // PE4, PE5 입력
+  b2:	82 b1       	in	r24, 0x02	; 2
+  b4:	8f 7c       	andi	r24, 0xCF	; 207
+  b6:	82 b9       	out	0x02, r24	; 2
+	DDRD &= ~0x0C; // PD2, PD3 입력
+  b8:	81 b3       	in	r24, 0x11	; 17
+  ba:	83 7f       	andi	r24, 0xF3	; 243
+  bc:	81 bb       	out	0x11, r24	; 17
+
+	PORTA = 0xFF; // LED 모두 끄기
+  be:	9b bb       	out	0x1b, r25	; 27
+	PORTE |= 0x30; // PE4, PE5 풀업
+  c0:	83 b1       	in	r24, 0x03	; 3
+  c2:	80 63       	ori	r24, 0x30	; 48
+  c4:	83 b9       	out	0x03, r24	; 3
+	PORTD |= 0x0C; // PD2, PD3 풀업
+  c6:	82 b3       	in	r24, 0x12	; 18
+  c8:	8c 60       	ori	r24, 0x0C	; 12
+  ca:	82 bb       	out	0x12, r24	; 18
+
+	EICRA = 0xA0; // INT2, INT3 하강 에지
+  cc:	80 ea       	ldi	r24, 0xA0	; 160
+  ce:	80 93 6a 00 	sts	0x006A, r24	; 0x80006a <__TEXT_REGION_LENGTH__+0x7e006a>
+	EIFR = 0x0C; // INT2, INT3 인터럽트 플래그 제거
+  d2:	8c e0       	ldi	r24, 0x0C	; 12
+  d4:	88 bf       	out	0x38, r24	; 56
+	EIMSK = 0x0C; // INT2, INT3 인터럽트 허용
+  d6:	89 bf       	out	0x39, r24	; 57
+
+	sei(); // 전체 인터럽트 허용
+  d8:	78 94       	sei
+
+	while (1)
+	{
+		if ((PINE & 0x30) == 0x00) // PE4와 PE5를 모두 누른 경우
+  da:	81 b1       	in	r24, 0x01	; 1
+  dc:	80 73       	andi	r24, 0x30	; 48
+  de:	11 f4       	brne	.+4      	; 0xe4 <main+0x36>
+		{
+			PORTA = 0x00; // LED 모두 켜기
+  e0:	1b ba       	out	0x1b, r1	; 27
+  e2:	fb cf       	rjmp	.-10     	; 0xda <main+0x2c>
+		}
+		else if ((PINE & 0x10) == 0x00) // PE4의 SW1을 누른 경우
+  e4:	0c 99       	sbic	0x01, 4	; 1
+  e6:	03 c0       	rjmp	.+6      	; 0xee <main+0x40>
+		{
+			PORTA = 0x0F; // LED 4~7 켜기
+  e8:	8f e0       	ldi	r24, 0x0F	; 15
+  ea:	8b bb       	out	0x1b, r24	; 27
+  ec:	f6 cf       	rjmp	.-20     	; 0xda <main+0x2c>
+		}
+		else if ((PINE & 0x20) == 0x00) // PE5의 SW2를 누른 경우
+  ee:	0d 99       	sbic	0x01, 5	; 1
+  f0:	03 c0       	rjmp	.+6      	; 0xf8 <main+0x4a>
+		{
+			PORTA = 0xF0; // LED 0~3 켜기
+  f2:	80 ef       	ldi	r24, 0xF0	; 240
+  f4:	8b bb       	out	0x1b, r24	; 27
+  f6:	f1 cf       	rjmp	.-30     	; 0xda <main+0x2c>
+		}
+		else if (check == 0) // 인터럽트 동작 중이 아닌 경우
+  f8:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+  fc:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 100:	89 2b       	or	r24, r25
+ 102:	59 f7       	brne	.-42     	; 0xda <main+0x2c>
+		{
+			PORTA = 0x00; // LED 모두 켜기
+ 104:	1b ba       	out	0x1b, r1	; 27
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 106:	2f ef       	ldi	r18, 0xFF	; 255
+ 108:	89 e6       	ldi	r24, 0x69	; 105
+ 10a:	98 e1       	ldi	r25, 0x18	; 24
+ 10c:	21 50       	subi	r18, 0x01	; 1
+ 10e:	80 40       	sbci	r24, 0x00	; 0
+ 110:	90 40       	sbci	r25, 0x00	; 0
+ 112:	e1 f7       	brne	.-8      	; 0x10c <main+0x5e>
+ 114:	00 c0       	rjmp	.+0      	; 0x116 <main+0x68>
+ 116:	00 00       	nop
+			_delay_ms(500); // 0.5초 대기
+
+			if (check == 0) // 인터럽트가 발생하지 않은 경우
+ 118:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 11c:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 120:	89 2b       	or	r24, r25
+ 122:	d9 f6       	brne	.-74     	; 0xda <main+0x2c>
+			{
+				PORTA = 0xFF; // LED 모두 끄기
+ 124:	8f ef       	ldi	r24, 0xFF	; 255
+ 126:	8b bb       	out	0x1b, r24	; 27
+ 128:	2f ef       	ldi	r18, 0xFF	; 255
+ 12a:	89 e6       	ldi	r24, 0x69	; 105
+ 12c:	98 e1       	ldi	r25, 0x18	; 24
+ 12e:	21 50       	subi	r18, 0x01	; 1
+ 130:	80 40       	sbci	r24, 0x00	; 0
+ 132:	90 40       	sbci	r25, 0x00	; 0
+ 134:	e1 f7       	brne	.-8      	; 0x12e <main+0x80>
+ 136:	00 c0       	rjmp	.+0      	; 0x138 <main+0x8a>
+ 138:	00 00       	nop
+ 13a:	cf cf       	rjmp	.-98     	; 0xda <main+0x2c>
+
+0000013c <__vector_3>:
+		}
+	}
+}
+
+ISR(INT2_vect) // PD2(INT2), 3번째 스위치
+{
+ 13c:	1f 92       	push	r1
+ 13e:	0f 92       	push	r0
+ 140:	0f b6       	in	r0, 0x3f	; 63
+ 142:	0f 92       	push	r0
+ 144:	11 24       	eor	r1, r1
+ 146:	2f 93       	push	r18
+ 148:	3f 93       	push	r19
+ 14a:	4f 93       	push	r20
+ 14c:	8f 93       	push	r24
+ 14e:	9f 93       	push	r25
+	int i; // LED 위치
+
+	check = 1; // 기본 깜빡임 정지
+ 150:	81 e0       	ldi	r24, 0x01	; 1
+ 152:	90 e0       	ldi	r25, 0x00	; 0
+ 154:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 158:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+
+	for (i = 7; i >= 0; i--) // LED를 오른쪽으로 이동
+ 15c:	27 e0       	ldi	r18, 0x07	; 7
+ 15e:	30 e0       	ldi	r19, 0x00	; 0
+ 160:	15 c0       	rjmp	.+42     	; 0x18c <__vector_3+0x50>
+	{
+		PORTA = ~(0x01 << i); // 해당 위치의 LED 켜기
+ 162:	81 e0       	ldi	r24, 0x01	; 1
+ 164:	90 e0       	ldi	r25, 0x00	; 0
+ 166:	02 2e       	mov	r0, r18
+ 168:	02 c0       	rjmp	.+4      	; 0x16e <__vector_3+0x32>
+ 16a:	88 0f       	add	r24, r24
+ 16c:	99 1f       	adc	r25, r25
+ 16e:	0a 94       	dec	r0
+ 170:	e2 f7       	brpl	.-8      	; 0x16a <__vector_3+0x2e>
+ 172:	80 95       	com	r24
+ 174:	8b bb       	out	0x1b, r24	; 27
+ 176:	4f ef       	ldi	r20, 0xFF	; 255
+ 178:	81 ee       	ldi	r24, 0xE1	; 225
+ 17a:	94 e0       	ldi	r25, 0x04	; 4
+ 17c:	41 50       	subi	r20, 0x01	; 1
+ 17e:	80 40       	sbci	r24, 0x00	; 0
+ 180:	90 40       	sbci	r25, 0x00	; 0
+ 182:	e1 f7       	brne	.-8      	; 0x17c <__vector_3+0x40>
+ 184:	00 c0       	rjmp	.+0      	; 0x186 <__vector_3+0x4a>
+ 186:	00 00       	nop
+{
+	int i; // LED 위치
+
+	check = 1; // 기본 깜빡임 정지
+
+	for (i = 7; i >= 0; i--) // LED를 오른쪽으로 이동
+ 188:	21 50       	subi	r18, 0x01	; 1
+ 18a:	31 09       	sbc	r19, r1
+ 18c:	33 23       	and	r19, r19
+ 18e:	4c f7       	brge	.-46     	; 0x162 <__vector_3+0x26>
+	{
+		PORTA = ~(0x01 << i); // 해당 위치의 LED 켜기
+		_delay_ms(100); // 0.1초 대기
+	}
+
+	check = 0; // 다시 기본 깜빡임 시작
+ 190:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 194:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+}
+ 198:	9f 91       	pop	r25
+ 19a:	8f 91       	pop	r24
+ 19c:	4f 91       	pop	r20
+ 19e:	3f 91       	pop	r19
+ 1a0:	2f 91       	pop	r18
+ 1a2:	0f 90       	pop	r0
+ 1a4:	0f be       	out	0x3f, r0	; 63
+ 1a6:	0f 90       	pop	r0
+ 1a8:	1f 90       	pop	r1
+ 1aa:	18 95       	reti
+
+000001ac <__vector_4>:
+
+ISR(INT3_vect) // PD3(INT3), 4번째 스위치
+{
+ 1ac:	1f 92       	push	r1
+ 1ae:	0f 92       	push	r0
+ 1b0:	0f b6       	in	r0, 0x3f	; 63
+ 1b2:	0f 92       	push	r0
+ 1b4:	11 24       	eor	r1, r1
+ 1b6:	2f 93       	push	r18
+ 1b8:	3f 93       	push	r19
+ 1ba:	4f 93       	push	r20
+ 1bc:	8f 93       	push	r24
+ 1be:	9f 93       	push	r25
+	int i; // LED 위치
+
+	check = 1; // 기본 깜빡임 정지
+ 1c0:	81 e0       	ldi	r24, 0x01	; 1
+ 1c2:	90 e0       	ldi	r25, 0x00	; 0
+ 1c4:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 1c8:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+
+	for (i = 0; i < 8; i++) // LED를 왼쪽으로 이동
+ 1cc:	20 e0       	ldi	r18, 0x00	; 0
+ 1ce:	30 e0       	ldi	r19, 0x00	; 0
+ 1d0:	15 c0       	rjmp	.+42     	; 0x1fc <__vector_4+0x50>
+	{
+		PORTA = ~(0x01 << i); // 해당 위치의 LED 켜기
+ 1d2:	81 e0       	ldi	r24, 0x01	; 1
+ 1d4:	90 e0       	ldi	r25, 0x00	; 0
+ 1d6:	02 2e       	mov	r0, r18
+ 1d8:	02 c0       	rjmp	.+4      	; 0x1de <__vector_4+0x32>
+ 1da:	88 0f       	add	r24, r24
+ 1dc:	99 1f       	adc	r25, r25
+ 1de:	0a 94       	dec	r0
+ 1e0:	e2 f7       	brpl	.-8      	; 0x1da <__vector_4+0x2e>
+ 1e2:	80 95       	com	r24
+ 1e4:	8b bb       	out	0x1b, r24	; 27
+ 1e6:	4f ef       	ldi	r20, 0xFF	; 255
+ 1e8:	81 ee       	ldi	r24, 0xE1	; 225
+ 1ea:	94 e0       	ldi	r25, 0x04	; 4
+ 1ec:	41 50       	subi	r20, 0x01	; 1
+ 1ee:	80 40       	sbci	r24, 0x00	; 0
+ 1f0:	90 40       	sbci	r25, 0x00	; 0
+ 1f2:	e1 f7       	brne	.-8      	; 0x1ec <__vector_4+0x40>
+ 1f4:	00 c0       	rjmp	.+0      	; 0x1f6 <__vector_4+0x4a>
+ 1f6:	00 00       	nop
+{
+	int i; // LED 위치
+
+	check = 1; // 기본 깜빡임 정지
+
+	for (i = 0; i < 8; i++) // LED를 왼쪽으로 이동
+ 1f8:	2f 5f       	subi	r18, 0xFF	; 255
+ 1fa:	3f 4f       	sbci	r19, 0xFF	; 255
+ 1fc:	28 30       	cpi	r18, 0x08	; 8
+ 1fe:	31 05       	cpc	r19, r1
+ 200:	44 f3       	brlt	.-48     	; 0x1d2 <__vector_4+0x26>
+	{
+		PORTA = ~(0x01 << i); // 해당 위치의 LED 켜기
+		_delay_ms(100); // 0.1초 대기
+	}
+
+	check = 0; // 다시 기본 깜빡임 시작
+ 202:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 206:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 20a:	9f 91       	pop	r25
+ 20c:	8f 91       	pop	r24
+ 20e:	4f 91       	pop	r20
+ 210:	3f 91       	pop	r19
+ 212:	2f 91       	pop	r18
+ 214:	0f 90       	pop	r0
+ 216:	0f be       	out	0x3f, r0	; 63
+ 218:	0f 90       	pop	r0
+ 21a:	1f 90       	pop	r1
+ 21c:	18 95       	reti
+
+0000021e <_exit>:
+ 21e:	f8 94       	cli
+
+00000220 <__stop_program>:
+ 220:	ff cf       	rjmp	.-2      	; 0x220 <__stop_program>

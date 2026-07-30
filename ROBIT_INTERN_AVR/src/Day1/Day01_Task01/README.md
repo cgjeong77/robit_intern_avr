@@ -1,0 +1,1 @@
+* [과제 2 실행 영상](https://drive.google.com/file/d/1PALJC8gjfjFzTAJEuTbaHP4k-9Ru7Imz/view?usp=sharing)
