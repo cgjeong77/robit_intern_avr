@@ -1,0 +1,606 @@
+
+Day03_Task02.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000034  00800100  0000028c  00000300  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000028c  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000334  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000364  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000068  00000000  00000000  000003a0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000cb3  00000000  00000000  00000408  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000008c3  00000000  00000000  000010bb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000050d  00000000  00000000  0000197e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000e8  00000000  00000000  00001e8c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000004e6  00000000  00000000  00001f74  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000031f  00000000  00000000  0000245a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000058  00000000  00000000  00002779  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	58 c0       	rjmp	.+176    	; 0xb6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	56 c0       	rjmp	.+172    	; 0xb6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	54 c0       	rjmp	.+168    	; 0xb6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	52 c0       	rjmp	.+164    	; 0xb6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	50 c0       	rjmp	.+160    	; 0xb6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	4e c0       	rjmp	.+156    	; 0xb6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	4c c0       	rjmp	.+152    	; 0xb6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	4a c0       	rjmp	.+148    	; 0xb6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	48 c0       	rjmp	.+144    	; 0xb6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	46 c0       	rjmp	.+140    	; 0xb6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	44 c0       	rjmp	.+136    	; 0xb6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	42 c0       	rjmp	.+132    	; 0xb6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	40 c0       	rjmp	.+128    	; 0xb6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	3e c0       	rjmp	.+124    	; 0xb6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	3c c0       	rjmp	.+120    	; 0xb6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	3a c0       	rjmp	.+116    	; 0xb6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	38 c0       	rjmp	.+112    	; 0xb6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	36 c0       	rjmp	.+108    	; 0xb6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	34 c0       	rjmp	.+104    	; 0xb6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	32 c0       	rjmp	.+100    	; 0xb6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	30 c0       	rjmp	.+96     	; 0xb6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	2e c0       	rjmp	.+92     	; 0xb6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	2c c0       	rjmp	.+88     	; 0xb6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	2a c0       	rjmp	.+84     	; 0xb6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	28 c0       	rjmp	.+80     	; 0xb6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	26 c0       	rjmp	.+76     	; 0xb6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	24 c0       	rjmp	.+72     	; 0xb6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	22 c0       	rjmp	.+68     	; 0xb6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	20 c0       	rjmp	.+64     	; 0xb6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	1e c0       	rjmp	.+60     	; 0xb6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	1c c0       	rjmp	.+56     	; 0xb6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	1a c0       	rjmp	.+52     	; 0xb6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	18 c0       	rjmp	.+48     	; 0xb6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	16 c0       	rjmp	.+44     	; 0xb6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	ec e8       	ldi	r30, 0x8C	; 140
+  a0:	f2 e0       	ldi	r31, 0x02	; 2
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a4 33       	cpi	r26, 0x34	; 52
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	9f d0       	rcall	.+318    	; 0x1f2 <main>
+  b4:	e9 c0       	rjmp	.+466    	; 0x288 <_exit>
+
+000000b6 <__bad_interrupt>:
+  b6:	a4 cf       	rjmp	.-184    	; 0x0 <__vectors>
+
+000000b8 <UART0_Init>:
+{
+	/*
+	 * 16MHz, 57600bps, 일반 속도 모드
+	 * UBRR0 = 16
+	 */
+	UBRR0H = 0;
+  b8:	10 92 90 00 	sts	0x0090, r1	; 0x800090 <__TEXT_REGION_LENGTH__+0x7e0090>
+	UBRR0L = 16;
+  bc:	80 e1       	ldi	r24, 0x10	; 16
+  be:	89 b9       	out	0x09, r24	; 9
+
+	UCSR0A = 0x00;                                  // 일반 속도 모드
+  c0:	1b b8       	out	0x0b, r1	; 11
+	UCSR0B = (1 << RXEN0) | (1 << TXEN0);           // 송신, 수신 활성화
+  c2:	88 e1       	ldi	r24, 0x18	; 24
+  c4:	8a b9       	out	0x0a, r24	; 10
+	UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);         // 8N1
+  c6:	86 e0       	ldi	r24, 0x06	; 6
+  c8:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <__TEXT_REGION_LENGTH__+0x7e0095>
+  cc:	08 95       	ret
+
+000000ce <UART0_Receive>:
+}
+
+static uint8_t UART0_Receive(void)
+{
+	while (!(UCSR0A & (1 << RXC0)))
+  ce:	5f 9b       	sbis	0x0b, 7	; 11
+  d0:	fe cf       	rjmp	.-4      	; 0xce <UART0_Receive>
+	{
+	}
+
+	return UDR0;
+  d2:	8c b1       	in	r24, 0x0c	; 12
+}
+  d4:	08 95       	ret
+
+000000d6 <UART0_Transmit>:
+
+static void UART0_Transmit(uint8_t data)
+{
+	while (!(UCSR0A & (1 << UDRE0)))
+  d6:	5d 9b       	sbis	0x0b, 5	; 11
+  d8:	fe cf       	rjmp	.-4      	; 0xd6 <UART0_Transmit>
+	{
+	}
+
+	UDR0 = data;
+  da:	8c b9       	out	0x0c, r24	; 12
+  dc:	08 95       	ret
+
+000000de <UART0_Print>:
+}
+
+static void UART0_Print(const char *text)
+{
+  de:	cf 93       	push	r28
+  e0:	df 93       	push	r29
+  e2:	ec 01       	movw	r28, r24
+	while (*text != '\0')
+  e4:	02 c0       	rjmp	.+4      	; 0xea <UART0_Print+0xc>
+	{
+		UART0_Transmit((uint8_t)*text);
+  e6:	f7 df       	rcall	.-18     	; 0xd6 <UART0_Transmit>
+		text++;
+  e8:	21 96       	adiw	r28, 0x01	; 1
+	UDR0 = data;
+}
+
+static void UART0_Print(const char *text)
+{
+	while (*text != '\0')
+  ea:	88 81       	ld	r24, Y
+  ec:	81 11       	cpse	r24, r1
+  ee:	fb cf       	rjmp	.-10     	; 0xe6 <UART0_Print+0x8>
+	{
+		UART0_Transmit((uint8_t)*text);
+		text++;
+	}
+}
+  f0:	df 91       	pop	r29
+  f2:	cf 91       	pop	r28
+  f4:	08 95       	ret
+
+000000f6 <LED_On>:
+
+/* ===================== LED ===================== */
+
+static void LED_On(uint8_t number)
+{
+	PORTA = (uint8_t)~(1 << number);
+  f6:	21 e0       	ldi	r18, 0x01	; 1
+  f8:	30 e0       	ldi	r19, 0x00	; 0
+  fa:	02 c0       	rjmp	.+4      	; 0x100 <LED_On+0xa>
+  fc:	22 0f       	add	r18, r18
+  fe:	33 1f       	adc	r19, r19
+ 100:	8a 95       	dec	r24
+ 102:	e2 f7       	brpl	.-8      	; 0xfc <LED_On+0x6>
+ 104:	20 95       	com	r18
+ 106:	2b bb       	out	0x1b, r18	; 27
+ 108:	08 95       	ret
+
+0000010a <LED_Reset>:
+	currentLED = (int8_t)number;
+}
+
+static void LED_Reset(void)
+{
+	PORTA = LED_OFF_VALUE;
+ 10a:	8f ef       	ldi	r24, 0xFF	; 255
+ 10c:	8b bb       	out	0x1b, r24	; 27
+ 10e:	08 95       	ret
+
+00000110 <LED_SweepLeft>:
+ * 0 → 7 → 6 → 5 → 4 → 3 → 2 → 1 → 0
+ *
+ * 실제 이동은 8번이며, 이동할 때마다 LEFT를 출력한다.
+ */
+static void LED_SweepLeft(void)
+{
+ 110:	cf 93       	push	r28
+	int8_t number;
+
+	LED_On(0);                                      // 항상 0번부터 시작
+ 112:	80 e0       	ldi	r24, 0x00	; 0
+ 114:	f0 df       	rcall	.-32     	; 0xf6 <LED_On>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 116:	2f ef       	ldi	r18, 0xFF	; 255
+ 118:	82 e5       	ldi	r24, 0x52	; 82
+ 11a:	97 e0       	ldi	r25, 0x07	; 7
+ 11c:	21 50       	subi	r18, 0x01	; 1
+ 11e:	80 40       	sbci	r24, 0x00	; 0
+ 120:	90 40       	sbci	r25, 0x00	; 0
+ 122:	e1 f7       	brne	.-8      	; 0x11c <LED_SweepLeft+0xc>
+ 124:	00 c0       	rjmp	.+0      	; 0x126 <LED_SweepLeft+0x16>
+ 126:	00 00       	nop
+	_delay_ms(150);
+
+	for (number = 7; number >= 0; number--)
+ 128:	c7 e0       	ldi	r28, 0x07	; 7
+ 12a:	0f c0       	rjmp	.+30     	; 0x14a <LED_SweepLeft+0x3a>
+	{
+		LED_On((uint8_t)number);
+ 12c:	8c 2f       	mov	r24, r28
+ 12e:	e3 df       	rcall	.-58     	; 0xf6 <LED_On>
+		UART0_Print("LEFT\r\n");
+ 130:	81 e0       	ldi	r24, 0x01	; 1
+ 132:	91 e0       	ldi	r25, 0x01	; 1
+ 134:	d4 df       	rcall	.-88     	; 0xde <UART0_Print>
+ 136:	2f ef       	ldi	r18, 0xFF	; 255
+ 138:	82 e5       	ldi	r24, 0x52	; 82
+ 13a:	97 e0       	ldi	r25, 0x07	; 7
+ 13c:	21 50       	subi	r18, 0x01	; 1
+ 13e:	80 40       	sbci	r24, 0x00	; 0
+ 140:	90 40       	sbci	r25, 0x00	; 0
+ 142:	e1 f7       	brne	.-8      	; 0x13c <LED_SweepLeft+0x2c>
+ 144:	00 c0       	rjmp	.+0      	; 0x146 <LED_SweepLeft+0x36>
+ 146:	00 00       	nop
+	int8_t number;
+
+	LED_On(0);                                      // 항상 0번부터 시작
+	_delay_ms(150);
+
+	for (number = 7; number >= 0; number--)
+ 148:	c1 50       	subi	r28, 0x01	; 1
+ 14a:	cc 23       	and	r28, r28
+ 14c:	7c f7       	brge	.-34     	; 0x12c <LED_SweepLeft+0x1c>
+		UART0_Print("LEFT\r\n");
+		_delay_ms(150);
+	}
+
+	currentLED = 0;
+}
+ 14e:	cf 91       	pop	r28
+ 150:	08 95       	ret
+
+00000152 <LED_SweepRight>:
+ * 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 0
+ *
+ * 실제 이동은 8번이며, 이동할 때마다 RIGHT를 출력한다.
+ */
+static void LED_SweepRight(void)
+{
+ 152:	cf 93       	push	r28
+	uint8_t number;
+
+	LED_On(0);                                      // 항상 0번부터 시작
+ 154:	80 e0       	ldi	r24, 0x00	; 0
+ 156:	cf df       	rcall	.-98     	; 0xf6 <LED_On>
+ 158:	2f ef       	ldi	r18, 0xFF	; 255
+ 15a:	82 e5       	ldi	r24, 0x52	; 82
+ 15c:	97 e0       	ldi	r25, 0x07	; 7
+ 15e:	21 50       	subi	r18, 0x01	; 1
+ 160:	80 40       	sbci	r24, 0x00	; 0
+ 162:	90 40       	sbci	r25, 0x00	; 0
+ 164:	e1 f7       	brne	.-8      	; 0x15e <LED_SweepRight+0xc>
+ 166:	00 c0       	rjmp	.+0      	; 0x168 <LED_SweepRight+0x16>
+ 168:	00 00       	nop
+	_delay_ms(150);
+
+	for (number = 1; number <= 7; number++)
+ 16a:	c1 e0       	ldi	r28, 0x01	; 1
+ 16c:	0f c0       	rjmp	.+30     	; 0x18c <LED_SweepRight+0x3a>
+	{
+		LED_On(number);
+ 16e:	8c 2f       	mov	r24, r28
+ 170:	c2 df       	rcall	.-124    	; 0xf6 <LED_On>
+		UART0_Print("RIGHT\r\n");
+ 172:	88 e0       	ldi	r24, 0x08	; 8
+ 174:	91 e0       	ldi	r25, 0x01	; 1
+ 176:	b3 df       	rcall	.-154    	; 0xde <UART0_Print>
+ 178:	2f ef       	ldi	r18, 0xFF	; 255
+ 17a:	82 e5       	ldi	r24, 0x52	; 82
+ 17c:	97 e0       	ldi	r25, 0x07	; 7
+ 17e:	21 50       	subi	r18, 0x01	; 1
+ 180:	80 40       	sbci	r24, 0x00	; 0
+ 182:	90 40       	sbci	r25, 0x00	; 0
+ 184:	e1 f7       	brne	.-8      	; 0x17e <LED_SweepRight+0x2c>
+ 186:	00 c0       	rjmp	.+0      	; 0x188 <LED_SweepRight+0x36>
+ 188:	00 00       	nop
+	uint8_t number;
+
+	LED_On(0);                                      // 항상 0번부터 시작
+	_delay_ms(150);
+
+	for (number = 1; number <= 7; number++)
+ 18a:	cf 5f       	subi	r28, 0xFF	; 255
+ 18c:	c8 30       	cpi	r28, 0x08	; 8
+		LED_On(number);
+		UART0_Print("RIGHT\r\n");
+		_delay_ms(150);
+	}
+
+	LED_On(0);                                      // 7번에서 0번으로 복귀
+ 18e:	78 f3       	brcs	.-34     	; 0x16e <LED_SweepRight+0x1c>
+ 190:	80 e0       	ldi	r24, 0x00	; 0
+	UART0_Print("RIGHT\r\n");
+ 192:	b1 df       	rcall	.-158    	; 0xf6 <LED_On>
+ 194:	88 e0       	ldi	r24, 0x08	; 8
+ 196:	91 e0       	ldi	r25, 0x01	; 1
+ 198:	a2 df       	rcall	.-188    	; 0xde <UART0_Print>
+ 19a:	2f ef       	ldi	r18, 0xFF	; 255
+ 19c:	82 e5       	ldi	r24, 0x52	; 82
+ 19e:	97 e0       	ldi	r25, 0x07	; 7
+ 1a0:	21 50       	subi	r18, 0x01	; 1
+ 1a2:	80 40       	sbci	r24, 0x00	; 0
+ 1a4:	90 40       	sbci	r25, 0x00	; 0
+ 1a6:	e1 f7       	brne	.-8      	; 0x1a0 <LED_SweepRight+0x4e>
+ 1a8:	00 c0       	rjmp	.+0      	; 0x1aa <LED_SweepRight+0x58>
+ 1aa:	00 00       	nop
+	_delay_ms(150);
+
+	currentLED = 0;
+}
+ 1ac:	cf 91       	pop	r28
+ 1ae:	08 95       	ret
+
+000001b0 <Check_ResetSwitch>:
+
+/* ===================== 스위치 ===================== */
+
+static void Check_ResetSwitch(void)
+{
+ 1b0:	cf 93       	push	r28
+	static uint8_t previousState = 1;
+	uint8_t currentState;
+
+	currentState = (PINE & (1 << SW1_PIN)) ? 1 : 0;
+ 1b2:	91 b1       	in	r25, 0x01	; 1
+ 1b4:	81 e0       	ldi	r24, 0x01	; 1
+ 1b6:	29 2f       	mov	r18, r25
+ 1b8:	20 71       	andi	r18, 0x10	; 16
+ 1ba:	94 ff       	sbrs	r25, 4
+ 1bc:	80 e0       	ldi	r24, 0x00	; 0
+ 1be:	c8 2f       	mov	r28, r24
+
+	/* HIGH에서 LOW로 바뀌는 순간만 검사 */
+	if ((previousState == 1) && (currentState == 0))
+ 1c0:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 1c4:	81 30       	cpi	r24, 0x01	; 1
+ 1c6:	89 f4       	brne	.+34     	; 0x1ea <Check_ResetSwitch+0x3a>
+ 1c8:	21 11       	cpse	r18, r1
+ 1ca:	0f c0       	rjmp	.+30     	; 0x1ea <Check_ResetSwitch+0x3a>
+ 1cc:	2f ef       	ldi	r18, 0xFF	; 255
+ 1ce:	89 ef       	ldi	r24, 0xF9	; 249
+ 1d0:	90 e0       	ldi	r25, 0x00	; 0
+ 1d2:	21 50       	subi	r18, 0x01	; 1
+ 1d4:	80 40       	sbci	r24, 0x00	; 0
+ 1d6:	90 40       	sbci	r25, 0x00	; 0
+ 1d8:	e1 f7       	brne	.-8      	; 0x1d2 <Check_ResetSwitch+0x22>
+ 1da:	00 c0       	rjmp	.+0      	; 0x1dc <Check_ResetSwitch+0x2c>
+ 1dc:	00 00       	nop
+	{
+		_delay_ms(20);
+
+		if (!(PINE & (1 << SW1_PIN)))
+ 1de:	0c 99       	sbic	0x01, 4	; 1
+ 1e0:	04 c0       	rjmp	.+8      	; 0x1ea <Check_ResetSwitch+0x3a>
+		{
+			LED_Reset();
+ 1e2:	93 df       	rcall	.-218    	; 0x10a <LED_Reset>
+			UART0_Print("RESET\r\n");
+ 1e4:	80 e1       	ldi	r24, 0x10	; 16
+ 1e6:	91 e0       	ldi	r25, 0x01	; 1
+ 1e8:	7a df       	rcall	.-268    	; 0xde <UART0_Print>
+		}
+	}
+
+	previousState = currentState;
+ 1ea:	c0 93 00 01 	sts	0x0100, r28	; 0x800100 <__DATA_REGION_ORIGIN__>
+}
+ 1ee:	cf 91       	pop	r28
+ 1f0:	08 95       	ret
+
+000001f2 <main>:
+
+/* ===================== main ===================== */
+
+int main(void)
+{
+ 1f2:	cf 93       	push	r28
+ 1f4:	df 93       	push	r29
+ 1f6:	cd b7       	in	r28, 0x3d	; 61
+ 1f8:	de b7       	in	r29, 0x3e	; 62
+ 1fa:	2b 97       	sbiw	r28, 0x0b	; 11
+ 1fc:	0f b6       	in	r0, 0x3f	; 63
+ 1fe:	f8 94       	cli
+ 200:	de bf       	out	0x3e, r29	; 62
+ 202:	0f be       	out	0x3f, r0	; 63
+ 204:	cd bf       	out	0x3d, r28	; 61
+	uint8_t receivedData;
+	char ledMessage[] = "0 LED on\r\n";
+ 206:	8b e0       	ldi	r24, 0x0B	; 11
+ 208:	e8 e2       	ldi	r30, 0x28	; 40
+ 20a:	f1 e0       	ldi	r31, 0x01	; 1
+ 20c:	de 01       	movw	r26, r28
+ 20e:	11 96       	adiw	r26, 0x01	; 1
+ 210:	01 90       	ld	r0, Z+
+ 212:	0d 92       	st	X+, r0
+ 214:	8a 95       	dec	r24
+ 216:	e1 f7       	brne	.-8      	; 0x210 <main+0x1e>
+
+	/* LED 포트 설정 */
+	DDRA = 0xFF;
+ 218:	8f ef       	ldi	r24, 0xFF	; 255
+ 21a:	8a bb       	out	0x1a, r24	; 26
+	PORTA = LED_OFF_VALUE;
+ 21c:	8b bb       	out	0x1b, r24	; 27
+
+	/* SW1 입력 및 내부 풀업 */
+	DDRE &= ~(1 << SW1_PIN);
+ 21e:	82 b1       	in	r24, 0x02	; 2
+ 220:	8f 7e       	andi	r24, 0xEF	; 239
+ 222:	82 b9       	out	0x02, r24	; 2
+	PORTE |= (1 << SW1_PIN);
+ 224:	83 b1       	in	r24, 0x03	; 3
+ 226:	80 61       	ori	r24, 0x10	; 16
+ 228:	83 b9       	out	0x03, r24	; 3
+
+	/* UART0 핀 방향 */
+	DDRE &= ~(1 << PE0);                            // RXD0 입력
+ 22a:	82 b1       	in	r24, 0x02	; 2
+ 22c:	8e 7f       	andi	r24, 0xFE	; 254
+ 22e:	82 b9       	out	0x02, r24	; 2
+	DDRE |= (1 << PE1);                             // TXD0 출력
+ 230:	82 b1       	in	r24, 0x02	; 2
+ 232:	82 60       	ori	r24, 0x02	; 2
+ 234:	82 b9       	out	0x02, r24	; 2
+	 *
+	 * PE2 HIGH:
+	 * - /RE HIGH → RO 출력 비활성화
+	 * - USB UART 수신 신호와의 충돌 방지
+	 */
+	DDRE |= (1 << MAX485_CTRL_PIN);
+ 236:	82 b1       	in	r24, 0x02	; 2
+ 238:	84 60       	ori	r24, 0x04	; 4
+ 23a:	82 b9       	out	0x02, r24	; 2
+	PORTE |= (1 << MAX485_CTRL_PIN);
+ 23c:	83 b1       	in	r24, 0x03	; 3
+ 23e:	84 60       	ori	r24, 0x04	; 4
+ 240:	83 b9       	out	0x03, r24	; 3
+
+	UART0_Init();
+ 242:	3a df       	rcall	.-396    	; 0xb8 <UART0_Init>
+
+	UART0_Print("READY\r\n");
+ 244:	88 e1       	ldi	r24, 0x18	; 24
+ 246:	91 e0       	ldi	r25, 0x01	; 1
+
+	while (1)
+	{
+		Check_ResetSwitch();
+ 248:	4a df       	rcall	.-364    	; 0xde <UART0_Print>
+
+		/* 수신 데이터가 들어온 경우에만 처리 */
+		if (UCSR0A & (1 << RXC0))
+ 24a:	b2 df       	rcall	.-156    	; 0x1b0 <Check_ResetSwitch>
+ 24c:	5f 9b       	sbis	0x0b, 7	; 11
+		{
+			receivedData = UART0_Receive();
+ 24e:	fd cf       	rjmp	.-6      	; 0x24a <main+0x58>
+ 250:	3e df       	rcall	.-388    	; 0xce <UART0_Receive>
+ 252:	18 2f       	mov	r17, r24
+
+			/* 터미널의 Enter 문자는 무시 */
+			if ((receivedData == '\r') ||
+ 254:	8d 30       	cpi	r24, 0x0D	; 13
+ 256:	c9 f3       	breq	.-14     	; 0x24a <main+0x58>
+ 258:	8a 30       	cpi	r24, 0x0A	; 10
+ 25a:	b9 f3       	breq	.-18     	; 0x24a <main+0x58>
+			{
+				continue;
+			}
+
+			/* 0~7: 해당 LED 켜기 */
+			if ((receivedData >= '0') &&
+ 25c:	80 ed       	ldi	r24, 0xD0	; 208
+ 25e:	81 0f       	add	r24, r17
+ 260:	88 30       	cpi	r24, 0x08	; 8
+			    (receivedData <= '7'))
+			{
+				LED_On((uint8_t)(receivedData - '0'));
+ 262:	30 f4       	brcc	.+12     	; 0x270 <main+0x7e>
+
+				ledMessage[0] = (char)receivedData;
+ 264:	48 df       	rcall	.-368    	; 0xf6 <LED_On>
+				UART0_Print(ledMessage);
+ 266:	19 83       	std	Y+1, r17	; 0x01
+ 268:	ce 01       	movw	r24, r28
+ 26a:	01 96       	adiw	r24, 0x01	; 1
+ 26c:	38 df       	rcall	.-400    	; 0xde <UART0_Print>
+			}
+
+			/* 8: 왼쪽으로 자동 이동 */
+			else if (receivedData == '8')
+ 26e:	ed cf       	rjmp	.-38     	; 0x24a <main+0x58>
+			{
+				LED_SweepLeft();
+ 270:	18 33       	cpi	r17, 0x38	; 56
+ 272:	11 f4       	brne	.+4      	; 0x278 <main+0x86>
+			}
+
+			/* 9: 오른쪽으로 자동 이동 */
+			else if (receivedData == '9')
+ 274:	4d df       	rcall	.-358    	; 0x110 <LED_SweepLeft>
+ 276:	e9 cf       	rjmp	.-46     	; 0x24a <main+0x58>
+			{
+				LED_SweepRight();
+ 278:	19 33       	cpi	r17, 0x39	; 57
+ 27a:	11 f4       	brne	.+4      	; 0x280 <main+0x8e>
+ 27c:	6a df       	rcall	.-300    	; 0x152 <LED_SweepRight>
+			}
+
+			/* 그 외 문자 */
+			else
+			{
+				UART0_Print("ERROR\r\n");
+ 27e:	e5 cf       	rjmp	.-54     	; 0x24a <main+0x58>
+ 280:	80 e2       	ldi	r24, 0x20	; 32
+ 282:	91 e0       	ldi	r25, 0x01	; 1
+ 284:	2c df       	rcall	.-424    	; 0xde <UART0_Print>
+ 286:	e1 cf       	rjmp	.-62     	; 0x24a <main+0x58>
+
+00000288 <_exit>:
+ 288:	f8 94       	cli
+
+0000028a <__stop_program>:
+ 28a:	ff cf       	rjmp	.-2      	; 0x28a <__stop_program>
